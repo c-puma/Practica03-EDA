@@ -33,7 +33,6 @@ public class PriorityQueueHeap <T extends Comparable<T>>{
     public boolean isEmpty() {
         return heap.isEmpty();
     }
-    
-    
+ 
 }
 

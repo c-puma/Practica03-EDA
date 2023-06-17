@@ -73,4 +73,11 @@ public class Map <T extends Comparable<T>> {
 	 public T get(int i) {
 		 return map.get(i);
 	 }
+	 
+	 public void mostrarHeap() {
+		 System.out.println("El mapa:");
+		 for(int i = 0;i < map.size(); i++) {
+			 System.out.print(map.get(i)+"/");
+		 }
+	 }
 }

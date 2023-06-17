@@ -19,6 +19,13 @@ public class QueueElement<T> implements Comparable<QueueElement<T>> {
     }
 
     public int compareTo(QueueElement<T> other) {//falta implementar bien
-        return Integer.compare(priority, priority);
+        return Integer.compare(priority, other.getPriority());
     }
+
+	@Override
+	public String toString() {
+		return "QueueElement [element=" + element + ", priority=" + priority + "]";
+	}
+    
+
 }
