@@ -28,15 +28,22 @@ public class Test {
 		System.out.println(testeando.dequeue());
 		System.out.println(testeando.dequeue());
 		System.out.println(testeando.dequeue());*/
-		PriorityQueueHeap<Integer> priorityQueue = new PriorityQueueHeap<>();
-		priorityQueue.enqueue(5, 2);
-		priorityQueue.enqueue(10, 1);
-		priorityQueue.enqueue(14, 13);
-		priorityQueue.enqueue(30, 30);
-		priorityQueue.enqueue(3, 3);
+		
+		PriorityQueueHeap<Integer> test = new PriorityQueueHeap<>();
+		test.enqueue(5, 2);
+		test.enqueue(10, 1);
+		test.enqueue(14, 13);
+		test.enqueue(30, 30);
+		test.enqueue(3, 3);
 		//System.out.println(testeando);
-		System.out.println(priorityQueue.dequeue());
-		System.out.println(priorityQueue.dequeue());
+		System.out.println(test.dequeue());
+		System.out.println(test.dequeue());
+		System.out.println(test.dequeue());
+		System.out.println(test.isEmpty());
+		System.out.println(test.back());
+		System.out.println(test.front());
+		
+		
 	}
 
 }

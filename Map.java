@@ -11,6 +11,7 @@ public class Map <T extends Comparable<T>> {
 	
 	public void insert(T element) {
         map.add(element);
+        filtrarHaciaArriba(map.size() - 1);
     }
 	
 	 public T remove() {
@@ -35,16 +36,26 @@ public class Map <T extends Comparable<T>> {
 		 
 		 if (indiceHijoIzquierdo < map.size() && map.get(indiceHijoIzquierdo).compareTo(map.get(largestIndex)) > 0) {
 			 largestIndex = indiceHijoIzquierdo;
-		 }else
+		 }
 		 
 		 if (indiceHijoDerecho < map.size() && map.get(indiceHijoDerecho).compareTo(map.get(largestIndex)) > 0) {
 			 largestIndex = indiceHijoDerecho;
-		 }else
+		 }
 
 		 if (largestIndex != index) {
 			 swap(index, largestIndex);
 			 filtrarHaciaAbajo(largestIndex);
 		 }
+	 }
+	 
+	 private void filtrarHaciaArriba(int index) {
+		 int parentIndex = (index - 1) / 2;
+
+		 while (index > 0 && map.get(index).compareTo(map.get(parentIndex)) > 0) {
+			 swap(index, parentIndex);
+			 index = parentIndex;
+			 parentIndex = (index - 1) / 2;
+	     }
 	 }
 	 
 	 public boolean isEmpty() {
